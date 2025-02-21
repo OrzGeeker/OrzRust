@@ -22,7 +22,7 @@ rustup component add clippy  # install clippy
 cargo clippy                 # lint current caret
 ```
 
-## Code in VSC with `[rust-analyzer][rust-analyzer]`
+## Code in VSC with [`rust-analyzer`][rust-analyzer]
 
 
 [rust-analyzer]: https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer
