@@ -26,3 +26,27 @@ cargo clippy                 # lint current caret
 
 
 [rust-analyzer]: https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer
+
+## Use Nightly Rust
+
+```bash
+rustup toolchain list                # list nightly rust
+rustup toolchain install nightly     # install nightly rust
+rustup override set nightly          # use nightly rust in local dir
+```
+
+## [The Rust Workflow][rust-workflow]
+
+[rust-workflow]: https://doc.rust-lang.org/book/appendix-07-nightly-rust.html
+
+💡 we can learn rust workflow, and apply on our own project.
+
+🚊 6-weeks train model
+
+```
+nightly: * - - * - - * - - * - - * - - * - * - *
+                     |                         |
+beta:                * - - - - - - - - *       *
+                                       |
+stable:                                *
+```
