@@ -1,4 +1,5 @@
 use clap::Parser;
+use log::{info, warn};
 
 /// ezw - Personal Easy Work CLI Util
 #[derive(Parser, Debug)]
@@ -13,10 +14,31 @@ struct Args {
     count: u8,
 }
 
+fn print_progress() {
+    let pb = indicatif::ProgressBar::new(100);
+    for i in 0..100 {
+        pb.println(format!("[+] finished #{}", i));
+        pb.inc(1);
+    }
+    pb.finish_with_message("done");
+}
+
 fn main() {
     let args = Args::parse();
 
+    let xs = vec![1, 2, 3];
+    println!("list is: {:?}", xs);
     for _ in 0..args.count {
-        println!("Hello {}!", args.name);
+        println!("Hello {:?}!", args.name);
     }
+
+    print_progress();
+
+    info!("start up");
+    warn!("oops! nothing implementation");
+}
+
+#[test]
+fn test_print_progress() {
+    assert_eq!(2, 2);
 }
