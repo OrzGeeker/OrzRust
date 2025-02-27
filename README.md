@@ -54,3 +54,4 @@ stable:                                *
 - [All Rust Keywords](https://doc.rust-lang.org/book/appendix-01-keywords.html)
 - [All Rust Operators & Symbols](https://doc.rust-lang.org/book/appendix-02-operators.html)
 - [Derivable Traits](https://doc.rust-lang.org/book/appendix-03-derivable-traits.html)
+- [Write CLI in Rust](https://rust-cli.github.io/book/tutorial/packaging.html)
