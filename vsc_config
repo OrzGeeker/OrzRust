@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#-*- coding: utf-8 -*-
+
+#!/bin/bash
+extensions=(
+  "rust-lang.rust-analyzer"
+)
+
+for ext in "${extensions[@]}"; do
+  code --install-extension "$ext" --force
+done
