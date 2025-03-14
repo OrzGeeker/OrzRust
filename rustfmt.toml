@@ -1,0 +1,8 @@
+# 设置最大行宽为 120
+max_width = 120
+# 缩进为 4 空格
+tab_spaces = 4
+# 强制链式方法换行显示
+chain_width = 0
+# 自动排序导入语句
+reorder_imports = true
