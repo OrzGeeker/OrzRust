@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 #-*- coding: utf-8 -*-
 
-#!/bin/bash
 extensions=(
   "rust-lang.rust-analyzer"
 )

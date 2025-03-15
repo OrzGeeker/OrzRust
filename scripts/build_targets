@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#-*- coding: utf-8 -*-
+
+targets=(
+  x86_64-apple-darwin           # macOS Intel
+  aarch64-apple-darwin          # macOS Apple Silicon
+  x86_64-unknown-linux-gnu      # Linux
+  x86_64-pc-windows-gnu         # Windows
+)
+
+for target in "${targets[@]}"; do
+  cargo build --release --target $target
+done
+
