@@ -1,11 +1,23 @@
-use clap::Parser;
+use clap::{Parser, Subcommand};
 
-#[derive(Parser)]
-struct Args {
-    #[arg(short, long)]
-    name: String,
+#[derive(Subcommand, Debug)]
+enum Commands {
+    Config {
+        #[command(subcommand)]
+        command: GitCommands,
+    },
+}
+#[derive(Debug, Subcommand)]
+enum GitCommands {
+    
+}
+#[derive(Parser, Debug)]
+#[command(version, about)]
+struct Cli {
+    #[command(subcommand)]
+    command: Commands,
 }
 fn main() {
-    let args = Args::parse();
-    println!("hello, world! {}", args.name);
+    let args = Cli::parse();
+    println!("{:?}", args);
 }
