@@ -1,23 +1,7 @@
-use clap::{Parser, Subcommand};
+// 导入lib.rs中的功能
+use ezw::run_app;
 
-#[derive(Subcommand, Debug)]
-enum Commands {
-    Config {
-        #[command(subcommand)]
-        command: GitCommands,
-    },
-}
-#[derive(Debug, Subcommand)]
-enum GitCommands {
-    
-}
-#[derive(Parser, Debug)]
-#[command(version, about)]
-struct Cli {
-    #[command(subcommand)]
-    command: Commands,
-}
 fn main() {
-    let args = Cli::parse();
-    println!("{:?}", args);
+    // 调用lib.rs中的run_app函数执行所有逻辑
+    run_app();
 }
